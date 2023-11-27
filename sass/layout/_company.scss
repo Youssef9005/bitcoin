@@ -1,0 +1,136 @@
+@use "../helper/colors" as *;
+
+.company {
+    width: 100%;
+    min-height: 100vh;
+    .container {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 50px 15px;
+        font-family: "Poppins";
+        .header {
+            h1 {
+                font-size: 30px;
+            }
+            p {
+                color: $silver-sand;
+                font-size: 14px;
+                max-width: 510px;
+                margin: 10px 0;
+            }
+        }
+        .holder {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 10px;
+            .box {
+                background-color: $eerie-black-1;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                max-width: 250px;
+                gap: 25px;
+                border-radius: 5px;
+                min-height: 240px;
+                margin-top: 50px;
+                img {
+                    max-width: 50px;
+                    background-color: black;
+                    border-radius: 50%;
+                    padding: 15px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 14px;
+                    color: $silver-sand;
+                    max-width: 400px;
+                    line-height: 23px;
+                }
+            }
+        }
+        .install {
+            min-width: 80%;
+            margin-top: 150px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            background-color: $eerie-black-1;
+            border-radius: 5px;
+            padding: 10px;
+            img {
+                max-width: 100%;
+            }
+            .content {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: start;
+                text-align: left;
+                h1 {
+                    max-width: 300px;
+                }
+                p {
+                    max-width: 450px;
+                    font-size: 14px;
+                    color: $silver-sand;
+                    margin: 10px 0;
+                }
+                .btns {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10px;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        display: flex;
+                        background-color: $ultramarine-blue;
+                        padding: 3px 10px;
+                        border: 1px solid $ultramarine-blue;
+                        border-radius: 30px;
+                        position: relative;
+                        i {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                        span {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            margin-left: 10px;
+                            font-size: 14px;
+                            span:last-child {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .company .container .install {
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            max-width: fit-content;
+        }
+    }
+}

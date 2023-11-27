@@ -1,0 +1,99 @@
+@use "../helper/colors" as *;
+
+
+.live {
+    width: 100%;
+    min-height: 100vh;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: "Poppins";
+        padding: 0 15px;
+
+        .header {
+            text-align: center;
+
+            p {
+                max-width: 570px;
+                color: $silver-sand;
+            }
+        }
+
+        .table {
+            overflow-x: auto;
+            width: 100%;
+            margin: 50px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            table {
+                color: white;
+                min-width: 1000px;
+                border-spacing: 0;
+                overflow: auto;
+                thead td {
+                    padding: 15px 10px;
+                    background-color: $onyx-2;
+                }
+                tbody {
+                    tr:last-child {
+                        td {
+                            border: 0;
+                        }
+                    }
+                }
+                tbody td {
+                    background-color: $eerie-black-1;
+                    position: relative;
+                    padding: 20px 10px;
+                    border-bottom: 1px dashed $davys-gray;
+                    div {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 35px;
+                        }
+                        p {
+                            margin-left: 10px;
+                        }
+                    }
+                    span {
+                        color: $silver-sand;
+                        font-size: 14px;
+                        position: relative;
+                        &.price:before {
+                            content: "";
+                            border-width: 5px;
+                            border-style: solid;
+                            position: absolute;
+                            left: -20px;
+                            bottom: 0;
+                            border-color: var(--arrow-color, red) transparent transparent transparent;
+                        }
+                    }
+                    &.icon {
+                        span {
+                            position: absolute;
+                            left: 70px;
+                            top: 50%;
+                            margin-top: 10px;
+                            color: $silver-sand;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1034px) {
+    .live .container .table {
+        display: block;
+    }
+}

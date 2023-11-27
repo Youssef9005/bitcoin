@@ -1,0 +1,35 @@
+@use "../helper/colors" as *;
+
+.text {
+    width: 100%;
+    min-height: 60vh;
+    background-color: $eerie-black-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        font-family: "Poppins";
+        color: white; 
+        text-align: center;
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            color: $silver-sand;
+            font-size: 14px;
+            max-width: 490px;
+            margin: 15px 0 45px;
+        }
+        a {
+            text-decoration: none;
+            background-color: $ultramarine-blue;
+            color: white;
+            padding: 15px;
+            border-radius: 30px;
+            transition: .3s;
+            &:hover {
+                background-color: $blue-ryb;
+            }
+        }
+    }
+}

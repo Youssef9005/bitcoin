@@ -1,0 +1,91 @@
+@use "../sass/helper/colors" as *;
+
+.home {
+    width: 100%;
+    padding: 15px;
+    min-height: 100vh;
+    .container {
+        padding: 0 60px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: "open sans";
+        color: white;
+        .content {
+            width: 50%;
+            h1 {
+                color: white;
+                font-size: 50px;
+                max-width: 500px;
+            }
+            p {
+                color:$silver-sand;
+                font-size: 18px;
+                max-width: 430px;
+                margin: 10px 0 20px;
+            }
+            a {
+                padding: 10px;
+                color: white;
+            }
+            .btns {
+                display: flex;
+                a.start {
+                    background-color: $ultramarine-blue;
+                    border-radius: 5px;
+                    padding: 15px 20px;
+                }
+                a.video {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    i {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 18px;
+                        width: 18px;
+                        border-radius: 50%;
+                        border: 2px solid white;
+                        padding: 15px;
+                        transition: .3s;
+                        &:hover {
+                            background-color: white;
+                            color: $ultramarine-blue;
+                        }
+                    }
+                }
+            }
+        }
+        .image {
+            width: 50%;
+        }
+        .image img {
+            max-width: 84%;
+        }
+    }
+}
+
+@media (max-width:910px) {
+    .home .container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        text-align: center;
+        .btns {
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+        .content h1 {
+            font-size: 30px;
+        }
+    }
+}
+
+@media (max-width:711px) {
+    .home .container .content .btns {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,82 @@
+@use "../helper/colors" as *;
+
+footer {
+    width: 100%;
+    font-family: "Poppins";
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        .header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            p {
+                color: $silver-sand;
+                max-width: 590px;
+                text-align: center;
+            }
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li a {
+                color: white;
+                padding: 5px;
+                margin-right: 20px;
+                font-size: 17px;
+                &:hover {
+                    border-bottom: 2px solid $ultramarine-blue;
+                }
+            }
+        }
+        h2 {
+            color: white;
+        }
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            a {
+                background-color: $eerie-black-1;
+                color: white;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .3s;
+                &:hover {
+                    background-color: $ultramarine-blue;
+                }
+            }
+        }
+    }
+    .footer {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 100px;
+        border-top: 1px solid $eerie-black-1;
+        padding: 20px 5px;
+        gap: 25px;
+        p {
+            color: $silver-sand;
+        }
+
+        p a {
+            color: $silver-sand;
+            margin-left: 10px;
+        }
+    }
+}
